@@ -56,10 +56,8 @@ ifneq (,$(findstring unix,$(platform)))
          CXX = g++-x86
       endif
    else
-      LIBS := -lpthread -lGL -lpcap
-      CXXFLAGS += -DHAVE_OPENGL -std=gnu++11
-      DESMUME_OPENGL = 1
-	DESMUME_OPENGL_CORE = 1
+      LIBS := -lpthread -lpcap
+      CXXFLAGS += -std=gnu++11
    endif
 
    ifneq (,$(findstring clang,$(platform)))
